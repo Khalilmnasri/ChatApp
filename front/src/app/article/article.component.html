@@ -1,0 +1,40 @@
+<div class="container">
+
+  <form>
+
+    <textarea class="form-control" rows="3" type="text" name="corpssss" [(ngModel)]="mes.corps" placeholder="Write message"
+      [value]="textarea"></textarea>
+
+    <button type="submit" class="btn btn-primary btn-md float-right" (click)="submit()">Send</button>
+  </form>
+  <ul class="list-group">
+    <div *ngFor="let msg of messages, index as k">
+      <li class="list-group-item list-group-item-info">
+        <div class="media mb-4">
+
+          <div class="media-body">
+            <h5 class="mt-0">Sender : {{msg.sender.name}} {{msg.sender.lastname}}</h5>
+            <h5 class="mt-0">Receiver : {{msg.receiver.name}} {{msg.receiver.lastname}}</h5>
+            <p>{{msg.corps}}</p>
+
+
+
+
+          </div>
+
+        </div>
+      </li>
+    </div>
+
+
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
